@@ -16,8 +16,9 @@ $("#posts").on("click", ".delete", function () {
   $("#posts").empty();
   renderer.renderPosts(tweeter.getPosts());
 });
+
 $("#posts").on("click", ".comments", function () {
-  let commentValue = $("#commentVal").val();
+  let commentValue = $(this).closest("div").find(".commentVal").val();
   let postId = $(this).data().id;
   tweeter.addComment(postId, commentValue);
   $("#posts").empty();

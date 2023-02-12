@@ -11,7 +11,7 @@ const Renderer = function () {
       }
 
       $(`#${post.id}`).append(
-        `<input id="commentVal" placeholder= "Got something to say?">`
+        `<input class="commentVal" placeholder= "Got something to say?">`
       );
 
       $(`#${post.id}`).append(

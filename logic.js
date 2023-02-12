@@ -75,12 +75,3 @@ const Tweeter = function () {
     removeComment: removeComment,
   };
 };
-
-// tweeter.addPost("This is my own post!");
-// console.log(tweeter.getPosts());
-
-// tweeter.removePost("p1");
-// console.log(tweeter.getPosts());
-
-// tweeter.removeComment("p1", "c2");
-// console.log(tweeter.getPosts());
