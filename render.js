@@ -2,7 +2,7 @@ const Renderer = function () {
   function renderPosts(postsArr) {
     for (let post of postsArr) {
       $("#posts").append(
-        `<div class ="post" id="${post.id}">${post.text}</div>`
+        `<div class ="post" id="${post.id}">${post.text} <br> </div>`
       );
       for (let indx in post.comments) {
         $(`#${post.id}`).append(
@@ -11,7 +11,7 @@ const Renderer = function () {
       }
 
       $(`#${post.id}`).append(
-        `<input class="commentVal" placeholder= "Got something to say?">`
+        `<input class="commentVal" placeholder= "Got something to say?" \n>`
       );
 
       $(`#${post.id}`).append(
