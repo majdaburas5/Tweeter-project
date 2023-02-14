@@ -5,9 +5,11 @@ renderer.renderPosts(tweeter.getPosts());
 // renderer.renderComments
 function post() {
   let inputValue = $("#input").val();
-  tweeter.addPost(inputValue);
-  $("#posts").empty();
-  renderer.renderPosts(tweeter.getPosts());
+  if (inputValue !== "") {
+    tweeter.addPost(inputValue);
+    $("#posts").empty();
+    renderer.renderPosts(tweeter.getPosts());
+  }
 }
 
 $("#posts").on("click", ".delete", function () {
@@ -20,9 +22,11 @@ $("#posts").on("click", ".delete", function () {
 $("#posts").on("click", ".comments", function () {
   let commentValue = $(this).closest("div").find(".commentVal").val();
   let postId = $(this).data().id;
-  tweeter.addComment(postId, commentValue);
-  $("#posts").empty();
-  renderer.renderPosts(tweeter.getPosts());
+  if (commentValue !== "") {
+    tweeter.addComment(postId, commentValue);
+    $("#posts").empty();
+    renderer.renderPosts(tweeter.getPosts());
+  }
 });
 
 $("#posts").on("click", ".delete-comment", function () {
